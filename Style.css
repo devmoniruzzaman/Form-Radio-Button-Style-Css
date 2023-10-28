@@ -1,0 +1,71 @@
+.gchoice {
+    z-index:1;
+    position:relative;
+    margin:0 0 10px 0;
+    padding:0;
+    height:70px;
+    width: 100%!important;
+}
+input.gfield-choice-input {
+    z-index:2;
+    appearance:none;
+    margin:0;
+    padding:0;
+    width: 100%;
+    border-radius: 5px;
+    height:100%;
+    background: white;
+    transition: .3s all ease-in-out;
+    position:absolute;
+    background:#dfe1e5;
+    position:absolute;
+}
+input.gfield-choice-input:hover,
+.gchoice label:hover {
+    cursor:pointer;
+}
+input.gfield-choice-input:checked {
+    background:#1273e6;
+}
+input.gfield-choice-input:checked + label {
+    color:white;
+}
+.gchoice label {
+    z-index:3;
+    font-weight:700;
+    color:#141c25;
+    display:block;
+    position: absolute;
+    padding: 0 0 0 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:100%;
+    overflow:visible;
+}
+input.gfield-choice-input + label:after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 2px solid #c5c9d2;
+    z-index: 2;
+    top: 50%;
+    transition: .3s all ease-in-out;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 500;
+}
+input[type="checkbox"].gfield-choice-input + label:after { 
+    border-radius: 5px;
+}
+input[type="radio"].gfield-choice-input + label:after {
+    border-radius:50px;
+}
+input.gfield-choice-input:checked + label:after {
+    content: "\00D7";
+    border: 2px solid white;
+}
